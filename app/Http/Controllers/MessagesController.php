@@ -25,4 +25,11 @@ class MessagesController extends Controller
 
         return redirect('/')->with('success', 'Mensagem enviada');
     }
+
+    public function getMessages()
+    {
+        $messages = Message::all();
+
+        return view('messages')->with('messages', $messages);
+    }
 }
