@@ -13,7 +13,7 @@
         </div>
         <div class="form-group">
             {{ Form::label('message', 'Message') }}
-            {{ Form::textarea('name', '', ['class' => 'form-control', 'placeholder' => 'Enter message']) }}
+            {{ Form::textarea('message', '', ['class' => 'form-control', 'placeholder' => 'Enter message']) }}
         </div>
         <div>
             {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
