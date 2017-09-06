@@ -2,10 +2,30 @@
 <html>
 <head>
     <title>Acme</title>
+    <link rel="stylesheet" type="text/css" href="/css/app.css">
 </head>
 <body>
-    @yeild('content')
+    @include('inc.navbar');
 
-    @include('inc.sidebar')
+    <div class="container">
+        @if(Request::is('/'))
+            @include('inc.showcase')
+        @endif
+        <div class="row">
+            <div class="col-md-8 col-lg-8">
+                @yield('content')
+            </div>
+
+            <div class="col-md-4 col-lg-4">
+                @include('inc.sidebar')
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="text-center" id="footer">
+        <p>Copyright 2017 &copy; Acme</p>
+    </footer>
+
 </body>
 </html>
